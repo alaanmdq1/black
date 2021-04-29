@@ -28,6 +28,7 @@ module.exports = Router().put('/rest/v1/paciente/:id', [
         const paciente = await Paciente.findByIdAndUpdate(req.params.id, {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
+            celular: req.body.celular,
             email: req.body.email,
             password: hashPassword
         },

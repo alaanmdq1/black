@@ -10,6 +10,7 @@ module.exports = Router().post('/rest/v1/paciente',[
     //chekea validacion
     check('nombre').isLength({min: 3}),
     check('apellido').isLength({min: 3}),
+    check('celular').isLength({min: 3}),
     check('email').isEmail(),
     check('password').isStrongPassword()], 
     async (req, res) => {
@@ -30,6 +31,7 @@ module.exports = Router().post('/rest/v1/paciente',[
         usuario = new Usuario ({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
+            celular: req.body.celular,
             email: req.body.email,
             password: hashPassword
         })
