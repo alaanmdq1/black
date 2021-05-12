@@ -7,7 +7,7 @@ const createExpressApp = require('./app/createExpressApp')
 require('./database/util/createDB')()
     .then(db => {
         console.log('Database connected Succesfully')
-        //express se integra con la data base
+        //express se integra con la data bas
         const app = createExpressApp({ db })
         const server = http.createServer(app)
         //servidor creado y escuchando
