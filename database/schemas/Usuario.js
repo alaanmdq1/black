@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 dotEnv.config()
 
 const {SECRET_KEY_PACIENTE } = process.env
-
+// usuario schema
 const usuarioSchema = new mongoose.Schema({
     nombre: {
         type: String,
